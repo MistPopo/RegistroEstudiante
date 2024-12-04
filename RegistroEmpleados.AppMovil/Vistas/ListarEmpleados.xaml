@@ -23,8 +23,38 @@
                     x:Name="NuevoEmpleadoBoton"
                     Grid.Row="0"
                     Grid.Column="1"
-                    Clicked="NuevoEmpleadoBoton_Clicked"
-                />
+                    Clicked="NuevoEmpleadoBoton_Clicked"/>
+            <CollectionView x:Name="ListaCollection"
+                            ItemsSource="{Binding Lista}"
+                            Grid.Row="1"
+                            Grid.ColumnSpan="2">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Grid ColumnSpacing="10" Padding="5">
+                            <Grid.RowDefinitions>
+                                <RowDefinition Height="Auto"/>
+                                <RowDefinition Height="Auto"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width="Auto"/>
+                                <ColumnDefinition Width="Auto"/>
+                            </Grid.ColumnDefinitions>
+                        <Image Grid.RowSpan="2"
+                                   Source="profile.jpg"
+                                   Aspect="AspectFill"
+                                   HeightRequest="60"
+                                   WidthRequest="60"/>
+                        <Label Grid.Column="1"
+                                   Grid.Row="0"
+                                   Text="{Binding NombreCompleto}"
+                                   FontSize="20"/>
+                            <Label Grid.Column="1"
+                               Grid.Row="1"
+                               Text="{Binding Cargo.Nombre}"/>
+                        </Grid>
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
         </Grid>
     </ScrollView>
 </ContentPage>

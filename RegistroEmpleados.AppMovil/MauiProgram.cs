@@ -29,7 +29,7 @@ namespace RegistroEmpleados.AppMovil
 
         public static void Registrar()
         {
-            FirebaseClient client = new FirebaseClient("https://registroempleados-d7b5e-default-rtdb.firebaseio.com/");
+            FirebaseClient client = new FirebaseClient("https://registroempleados-a6a40-default-rtdb.firebaseio.com/");
 
             var cargos = client.Child("Cargos").OnceAsync<Cargo>();
 
