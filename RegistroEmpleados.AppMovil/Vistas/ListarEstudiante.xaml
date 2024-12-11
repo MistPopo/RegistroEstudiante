@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="RegistroEmpleados.AppMovil.Vistas.ListarEmpleados"
-             Title="Listado Empleado">
+             x:Class="RegistroEstudiante.AppMovil.Vistas.ListarEstudiante"
+             Title="Listado Estudiante">
     <ScrollView>
         <Grid Padding="10" RowSpacing="10" ColumnSpacing="5">
             <Grid.RowDefinitions>
@@ -19,11 +19,11 @@
                        Grid.Row="0"
                        Grid.Column="0"
                        TextChanged="filtroSearchBar_TextChanged"/>
-            <Button Text="Nuevo Empleado"
-                    x:Name="NuevoEmpleadoBoton"
+            <Button Text="Nuevo Estudiante"
+                    x:Name="NuevoEstuadianteBoton"
                     Grid.Row="0"
                     Grid.Column="1"
-                    Clicked="NuevoEmpleadoBoton_Clicked"/>
+                    Clicked="NuevoEstudianteBoton_Clicked"/>
             <CollectionView x:Name="ListaCollection"
                             ItemsSource="{Binding Lista}"
                             Grid.Row="1"

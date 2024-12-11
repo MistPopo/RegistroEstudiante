@@ -1,4 +1,4 @@
-﻿namespace RegistroEmpleados.AppMovil
+﻿namespace RegistroEstudiante.AppMovil
 {
     public partial class MainPage : ContentPage
     {

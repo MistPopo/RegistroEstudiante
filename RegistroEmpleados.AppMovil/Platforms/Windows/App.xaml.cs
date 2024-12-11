@@ -19,7 +19,7 @@ namespace RegistroEmpleados.AppMovil.WinUI
             this.InitializeComponent();
         }
 
-        protected override MauiApp CreateMauiApp() => MauiProgram.CreateMauiApp();
+        protected override MauiApp CreateMauiApp() => RegistroEstudiante.AppMovil.MauiProgram.CreateMauiApp();
     }
 
 }

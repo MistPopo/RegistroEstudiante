@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace RegistroEmpleados.Modelos.Modelos
+namespace RegistroEstudiante.Modelos.Modelos
 {
-    public class Empleado
+    public class Estudiante
     {
         public string? PrimerNombre { get; set; }
         public string? SegundoNombre { get; set; }
@@ -14,9 +14,9 @@ namespace RegistroEmpleados.Modelos.Modelos
         public string? SegundoApellido { get; set; }
         public string? CorreoElectronico { get; set; }
 
-        public int Sueldo { get; set; }
+        public int Edad { get; set; }
         public DateTime FechaInicio { get; set; }
-        public Cargo Cargo { get; set; }
+        public Cargo? Curso { get; set; }
         public string NombreCompleto => $"{PrimerNombre} {PrimerApellido}";
     }
 }

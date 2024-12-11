@@ -1,6 +1,6 @@
-﻿using RegistroEmpleados.AppMovil.Vistas;
+﻿using RegistroEstudiante.AppMovil.Vistas;
 
-namespace RegistroEmpleados.AppMovil
+namespace RegistroEstudiante.AppMovil
 {
     public partial class AppShell : Shell
     {

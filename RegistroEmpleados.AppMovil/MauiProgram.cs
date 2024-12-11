@@ -1,9 +1,9 @@
 ﻿using Firebase.Database;
 using Firebase.Database.Query;
 using Microsoft.Extensions.Logging;
-using RegistroEmpleados.Modelos.Modelos;
+using RegistroEstudiante.Modelos.Modelos;
 
-namespace RegistroEmpleados.AppMovil
+namespace RegistroEstudiante.AppMovil
 {
     public static class MauiProgram
     {
@@ -29,15 +29,16 @@ namespace RegistroEmpleados.AppMovil
 
         public static void Registrar()
         {
-            FirebaseClient client = new FirebaseClient("https://registroempleados-a6a40-default-rtdb.firebaseio.com/");
+            FirebaseClient client = new FirebaseClient("https://registroestudiantes-c0b92-default-rtdb.firebaseio.com/");
 
-            var cargos = client.Child("Cargos").OnceAsync<Cargo>();
+            var cargos = client.Child("cursos").OnceAsync<Cargo>();
 
             if (cargos.Result.Count == 0) 
             {
-                client.Child("Cargos").PostAsync(new Cargo { Nombre = "Administrador" });
-                client.Child("Cargos").PostAsync(new Cargo { Nombre = "Supervisor" });
-                client.Child("Cargos").PostAsync(new Cargo { Nombre = "Usuario" });
+                client.Child("cursos").PostAsync(new Cargo { Nombre = "1 Medio" });
+                client.Child("cursos").PostAsync(new Cargo { Nombre = "2 Medio" });
+                client.Child("cursos").PostAsync(new Cargo { Nombre = "3 Medio" });
+                client.Child("cursos").PostAsync(new Cargo { Nombre = "4 Medio" });
             }
         }
     }

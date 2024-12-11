@@ -1,6 +1,6 @@
-﻿using RegistroEmpleados.AppMovil.Vistas;
+﻿using RegistroEstudiante.AppMovil.Vistas;
 
-namespace RegistroEmpleados.AppMovil
+namespace RegistroEstudiante.AppMovil
 {
     public partial class App : Application
     {
@@ -8,7 +8,7 @@ namespace RegistroEmpleados.AppMovil
         {
             InitializeComponent();
 
-            MainPage = new NavigationPage(new ListarEmpleados());
+            MainPage = new NavigationPage(new ListarEstudiante());
         }
     }
 }
